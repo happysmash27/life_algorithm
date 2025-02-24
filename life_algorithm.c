@@ -25,7 +25,7 @@ void do_home_tasks() {
     work_on_takuno_render();
   } else if (is_enough_energy() && is_chore(chore_list)) {
     do_chores(chore_list);
-  } else {
+  } else if (outdated_packages() && is_enough_compute()) {
     work_on_portage_update();
   }
 }
